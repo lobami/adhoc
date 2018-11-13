@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
  });
 
  router.get('/signup',isAuthenticated, (req, res, next) => {
-    res.render('signup');
+    res.render('signup', {title: "Loging" });
   });
   
   router.post('/signup', passport.authenticate('local-signup', {
